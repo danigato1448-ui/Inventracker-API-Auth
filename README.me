@@ -1,0 +1,65 @@
+Para que tu README.md se vea profesional y el instructor entienda perfectamente cómo evaluar tu API, te recomiendo estructurarlo de la siguiente manera. Esto le da un valor agregado a tu entrega, demostrando que no solo programas, sino que sabes documentar procesos técnicos.
+
+Copia y pega este contenido en tu archivo README.md:
+
+API de Autenticación - Inventracker 🚀
+Evidencia: GA7-220501096-AA5-EV02 - Testing de API con Postman.
+
+📝 Descripción
+Este proyecto es un servicio web desarrollado con Node.js y Express que gestiona la autenticación de usuarios para el sistema Inventracker. Permite el registro de nuevos usuarios y la validación de credenciales (Login).
+
+🛠️ Requisitos Técnicos
+Entorno de ejecución: Node.js.
+
+Framework: Express.
+
+Herramienta de Testing: Postman.
+
+🚀 Instalación y Ejecución
+Clona este repositorio.
+
+Abre una terminal en la carpeta del proyecto.
+
+Instala las dependencias necesarias:
+
+Bash
+npm install
+Inicia el servidor:
+
+Bash
+node index.js
+El servidor correrá en http://localhost:3001
+
+🧪 Guía de Pruebas (Endpoints)
+Para realizar el testing, utiliza Postman con las siguientes configuraciones:
+
+1. Registro de Usuario
+Método: POST
+
+URL: http://localhost:3001/api/registro
+
+Body (JSON):
+
+JSON
+{
+  "usuario": "nuevo_usuario",
+  "password": "clave_segura"
+}
+2. Inicio de Sesión (Exitoso)
+Método: POST
+
+URL: http://localhost:3001/api/login
+
+Body (JSON):
+
+JSON
+{
+  "usuario": "admin",
+  "password": "123"
+}
+3. Inicio de Sesión (Fallido)
+Método: POST
+
+URL: http://localhost:3001/api/login
+
+Body (JSON): Use credenciales incorrectas para validar el mensaje de error.
